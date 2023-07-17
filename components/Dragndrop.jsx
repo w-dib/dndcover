@@ -41,7 +41,7 @@ const ImageUpload = () => {
             className="w-full h-full object-cover"
           />
         ) : (
-          <p className="text-center text-gray-400">
+          <p className="my-44 mx-6 text-center text-gray-400">
             {isDragActive
               ? "Drop the image here"
               : "Drag and drop an image here, or click to select"}
