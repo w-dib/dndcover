@@ -5,10 +5,26 @@ import Dragndrop from "@/components/Dragndrop";
 
 export default function Home() {
   const [titleText, setTitleText] = useState("");
+  const [subtitleText, setSubtitleText] = useState("");
+  const [descriptionText, setDescriptionText] = useState("");
+  const [authorText, setAuthorText] = useState("");
 
   const handleTitleChange = (event) => {
     setTitleText(event.target.value);
   };
+
+  const handleSubtitleChange = (event) => {
+    setSubtitleText(event.target.value);
+  };
+
+  const handleDescriptionChange = (event) => {
+    setDescriptionText(event.target.value);
+  };
+
+  const handleAuthorChange = (event) => {
+    setAuthorText(event.target.value);
+  };
+
   return (
     <main className="w-full flex flex-col gap-10 min-h-screen items-center p-24">
       <div className="w-96 md:w-max">
@@ -21,9 +37,38 @@ export default function Home() {
       </div>
       <div className="w-96 md:w-max flex md:flex-row flex-col md:items-start items-center gap-6">
         <div className="relative w-72">
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-3 w-max">
-            <p className="text-red">{titleText}</p>
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-8 w-max">
+            <p
+              className={`text-5xl text-white outline-text ${nodestoCaps.className}`}
+            >
+              {titleText}
+            </p>
           </div>
+
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-20 w-max">
+            <p
+              className={`text-3xl text-white outline-text ${nodestoCaps.className}`}
+            >
+              {subtitleText}
+            </p>
+          </div>
+
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-64 w-max">
+            <p
+              className={`text-xl text-white outline-text ${nodestoCaps.className}`}
+            >
+              {descriptionText}
+            </p>
+          </div>
+
+          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-16 w-max">
+            <p
+              className={`text-4xl text-white outline-text ${nodestoCaps.className}`}
+            >
+              {authorText}
+            </p>
+          </div>
+
           <Dragndrop />
         </div>
         <div className="flex flex-col gap-4 w-72">
@@ -49,6 +94,8 @@ export default function Home() {
             name="subtitle"
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:border-blue-500"
             placeholder="Enter subtitle..."
+            value={subtitleText}
+            onChange={handleSubtitleChange}
           />
 
           <label htmlFor="description" className="text-lg font-medium">
@@ -60,6 +107,8 @@ export default function Home() {
             name="description"
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:border-blue-500"
             placeholder="Enter description..."
+            value={descriptionText}
+            onChange={handleDescriptionChange}
           />
 
           <label htmlFor="author" className="text-lg font-medium">
@@ -71,6 +120,8 @@ export default function Home() {
             name="author"
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300 focus:border-blue-500"
             placeholder="Enter author..."
+            value={authorText}
+            onChange={handleAuthorChange}
           />
         </div>
       </div>
