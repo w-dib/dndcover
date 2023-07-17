@@ -12,21 +12,17 @@ export default function Home() {
   return (
     <main className="w-full flex flex-col gap-10 min-h-screen items-center p-24">
       <div className="w-96 md:w-max">
-        <h1
-          className={`text-6xl font-bold text-center  ${nodestoCaps.className}`}
-        >
+        <h1 className={`text-6xl text-center  ${nodestoCaps.className}`}>
           D&D Adventure Cover Generator
         </h1>
-        <p
-          className={`text-center ${oraniembaum.className} font-bold text-black`}
-        >
+        <p className={`text-center ${oraniembaum.className} text-black`}>
           Please make sure that your image&apos;s aspect ratio is A4
         </p>
       </div>
       <div className="w-96 md:w-max flex md:flex-row flex-col md:items-start items-center gap-6">
         <div className="relative w-72">
           <div className="absolute left-1/2 transform -translate-x-1/2 top-3 w-max">
-            {titleText}
+            <p className="text-red">{titleText}</p>
           </div>
           <Dragndrop />
         </div>
