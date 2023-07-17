@@ -8,3 +8,10 @@
   text-shadow: 1.4px 1.4px 0 #000, -1.4px -1.4px 0 #000, 1.4px -1.4px 0 #000,
     -1.4px 1.4px 0 #000, 1.4px 1.4px 0 #000;
 }
+
+.outline-text-sm {
+  -webkit-text-stroke: 0.5px black;
+  color: white;
+  text-shadow: 0.8px 0.8px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000,
+    -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
+}

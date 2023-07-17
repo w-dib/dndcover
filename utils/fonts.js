@@ -1,4 +1,3 @@
-import { Oranienbaum } from "next/font/google";
 import localFont from "next/font/local";
 
 export const nodestoCaps = localFont({
@@ -6,7 +5,7 @@ export const nodestoCaps = localFont({
   display: "swap",
 });
 
-export const oraniembaum = Oranienbaum({
-  weight: "400",
-  preload: false,
+export const cambria = localFont({
+  src: "../fonts/NodestoCapsCondensedBold.otf",
+  display: "swap",
 });

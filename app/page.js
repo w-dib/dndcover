@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { nodestoCaps, oraniembaum } from "@/utils/fonts";
+import { nodestoCaps, cambria } from "@/utils/fonts";
 import Dragndrop from "@/components/Dragndrop";
 
 export default function Home() {
@@ -31,7 +31,9 @@ export default function Home() {
         <h1 className={`text-6xl text-center  ${nodestoCaps.className}`}>
           D&D Adventure Cover Generator
         </h1>
-        <p className={`text-center ${oraniembaum.className} text-black`}>
+        <p
+          className={`text-center text-lg outline-text-sm ${cambria.className} text-black`}
+        >
           Please make sure that your image&apos;s aspect ratio is A4
         </p>
       </div>
@@ -55,7 +57,7 @@ export default function Home() {
 
           <div className="absolute left-1/2 transform -translate-x-1/2 top-64 w-max">
             <p
-              className={`text-xl text-white outline-text ${nodestoCaps.className}`}
+              className={`text-xl text-white outline-text-sm ${cambria.className}`}
             >
               {descriptionText}
             </p>
@@ -63,7 +65,7 @@ export default function Home() {
 
           <div className="absolute left-1/2 transform -translate-x-1/2 bottom-16 w-max">
             <p
-              className={`text-4xl text-white outline-text ${nodestoCaps.className}`}
+              className={`text-2xl text-white outline-text-sm ${cambria.className}`}
             >
               {authorText}
             </p>
